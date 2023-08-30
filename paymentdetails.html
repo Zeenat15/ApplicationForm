@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="prac5_style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h2>Payment Details</h2>
+
+            <div class="input-group">
+                <label for="payment">Choose payment option </label>
+                <input type="radio" name="option" value="1" id="credit" onkeyup="validateOption()">Credit Card
+                <input type="radio" name="option" value="2" id="debit" onkeyup="validateOption()">Debit Card
+                <!-- <input type="radio" name="upi" value="3"  id="upi" onkeyup="validateOption()">Upi -->
+                <span id="payment-error" style="bottom: -15px"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Enter details</label>
+                <input type="text" placeholder="Credit/Debit" id="contact-details" onkeyup="validateDetails()">
+                <span id="details-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Enter CVV</label>
+                <input type="text" placeholder="123" id="contact-cvv" onkeyup="validateCVV()">
+                <span id="cvv-error"></span>
+            </div>
+
+            <a>
+                <input type="submit" value="Submit" onclick="return validateFormPayment()" />
+            </a>
+            <span id="submit-error"></span>
+
+
+        </form>
+
+    </div>
+    <script src="prac5_script.js"></script>
+</body>
+
+</html>

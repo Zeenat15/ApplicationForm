@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Offered</title>
+    <link rel="stylesheet" href="prac5_style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h2>Courses Offered</h2>
+            <div class="input-group">
+                <label for="courses">Choose courses: </label>
+                <select name="courses">
+                    <option value="C" id="course">C</option>
+                    <option value="C++" id="course">C++</option>
+                    <option value="Java" id="course">Java</option>
+                    <option value="Python" id="course">Python</option>
+                    <option value="Data Science" id="course">Data Science</option>
+                    <option value="AIML" id="course">AIML</option>
+                    <option value="Machine Learning" id="course">Machine Learning</option>
+                    <option value="Deep Learning" id="course">Deep Learning</option>
+                    <option value="Artificial Intelligence" id="course">Artificial Intelligence</option>
+                    <option value="Cyber Security" id="course">Cyber Security</option>
+                    <option value="Ethical hacking" id="course">Ethical hacking</option>
+                    <option value="Web development" id="course">Web development</option>
+                </select>
+                <span id="course-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="duration">Choose duration: </label>
+                <input type="checkbox" name="4" value="4">4 weeks
+                <input type="checkbox" name="8" value="8">8 weeks
+                <input type="checkbox" name="12" value="12">12 weeks
+                <span id="duration-error" style="bottom: -15px"></span>
+            </div>
+
+            <a href="paymentdetails.html">
+                <input type="button" value="Next" onclick="return validateFormCourses()" />
+            </a>
+            <span id="submit-error"></span>
+
+
+        </form>
+
+    </div>
+    <script src="prac5_script.js"></script>
+</body>
+
+</html>

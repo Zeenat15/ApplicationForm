@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <link rel="stylesheet" href="prac5_style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <b></u><h1>Registration form</h1></b>
+            <b></u><h1>with validations</h1></b>
+
+            <h2>Personal information</h2>
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                <span id="name-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Phone No.</label>
+                <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()">
+                <span id="phone-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Email Id</label>
+                <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Date of birth</label>
+                <input type="date" placeholder="Enter dob" id="contact-dob" min="1995-01-01" max="2003-12-31"
+                    onkeyup="validateDOB()">
+                <span id="dob-error" style="bottom: -15px"></span>
+            </div>
+
+            <a href="#section2">
+                <input type="button" id="btn" value="Save & Next"onclick="return validateFormPersonal()" />
+            </a>
+            <span id="submit-error"></span>
+
+            <h2>Educational information</h2>
+            <div class="input-group" id="section2">
+                <label>X<sup>th</sup> percentage</label>
+                <input type="text" placeholder="90" id="contact-marks10" onkeyup="validateMarks10()">
+                <span id="marks-error10"></span>
+            </div>
+
+            <div class="input-group">
+                <label>XII<sup>th</sup> percentage</label>
+                <input type="text" placeholder="90" id="contact-marks12" onkeyup="validateMarks12()">
+                <span id="marks-error12"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Additional certifications</label>
+                <input type="text" placeholder="Course on AIML from Coursera">
+            </div>
+
+            <div class="input-group">
+                <label>Upload files</label>
+                <input type="file" name="fileupload" multiple />
+            </div>
+
+            
+            <a href="#section3">
+                <input type="button" id="btn" value="Save & Next"onclick="return validateFormEducational()" />
+            </a>
+            
+
+            <h2>Courses Offered</h2>
+            <div class="input-group" id="section3">
+                <label for="courses">Choose courses: </label>
+                <select name="courses" onclick="return validateCourse()">
+                    <option value="">--Select a course...</option>
+                    <option value="C" id="course">C</option>
+                    <option value="C++" id="course">C++</option>
+                    <option value="Java" id="course">Java</option>
+                    <option value="Python" id="course">Python</option>
+                    <option value="Data Science" id="course">Data Science</option>
+                    <option value="AIML" id="course">AIML</option>
+                    <option value="Machine Learning" id="course">Machine Learning</option>
+                    <option value="Deep Learning" id="course">Deep Learning</option>
+                    <option value="Artificial Intelligence" id="course">Artificial Intelligence</option>
+                    <option value="Cyber Security" id="course">Cyber Security</option>
+                    <option value="Ethical hacking" id="course">Ethical hacking</option>
+                    <option value="Web development" id="course">Web development</option>
+                </select>
+                <span id="course-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="duration">Choose duration: </label>
+                <input type="checkbox" name="4" value="4">4 weeks
+                <input type="checkbox" name="8" value="8">8 weeks
+                <input type="checkbox" name="12" value="12">12 weeks
+                <span id="duration-error" style="bottom: -15px"></span>
+            </div>
+
+            <!-- <a href="paymentdetails.html">
+                <input type="button" value="Next" onclick="return validateFormCourses()" />
+            </a>
+            <span id="submit-error"></span> -->
+            <a href="#section4">
+                <input type="button" id="btn" value="Save & Next"onclick="return validateFormCourses()" />
+            </a>
+
+            <h2>Payment Details</h2>
+
+            <div class="input-group" id="section4">
+                <label for="payment">Choose payment option </label>
+                <input type="radio" name="option" value="1" id="credit" onkeyup="validateOption()">Credit Card
+                <input type="radio" name="option" value="2" id="debit" onkeyup="validateOption()">Debit Card
+                <input type="radio" name="upi" value="3"  id="upi" onkeyup="validateOption()">Upi
+                <span id="payment-error" style="bottom: -15px"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Enter details</label>
+                <input type="text" placeholder="Credit/Debit" id="contact-details" onkeyup="validateDetails()">
+                <span id="details-error"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Enter CVV</label>
+                <input type="text" placeholder="123" id="contact-cvv" onkeyup="validateCVV()">
+                <span id="cvv-error"></span>
+            </div>
+
+            <a>
+                <input type="submit" value="Submit" onclick="return validateFormPayment()" />
+            </a>
+            <span id="submit-error"></span>
+
+            <!-- <div class="container">
+                <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+                <div class="popup" id="popup">
+                    <img src="tick.png" alt="OK">
+                    <h2>Thank You !</h2>
+                    <p>Your details has been successfully submitted. Thanks!...</p>
+                    <button type="button"onclick="closePopup()>Okay</button>
+                </div>
+            </div> -->
+
+
+
+        </form>
+
+    </div>
+    <script src="prac5_script.js"></script>
+</body>
+
+</html>

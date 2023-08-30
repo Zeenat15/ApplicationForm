@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Information</title>
+    <link rel="stylesheet" href="prac5_style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h2>Educational information</h2>
+            <div class="input-group">
+                <label>X<sup>th</sup> percentage</label>
+                <input type="text" placeholder="90" id="contact-marks10" onkeyup="validateMarks10()">
+                <span id="marks-error10"></span>
+            </div>
+
+            <div class="input-group">
+                <label>XII<sup>th</sup> percentage</label>
+                <input type="text" placeholder="90" id="contact-marks12" onkeyup="validateMarks12()">
+                <span id="marks-error12"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Additional certifications</label>
+                <input type="text" placeholder="Course on AIML from Coursera">
+            </div>
+
+            <div class="input-group">
+                <label>Upload files</label>
+                <input type="file" name="fileupload" multiple />
+            </div>
+
+            <a href="coursesoffered.html">
+                <input type="button" value="Next" onclick="return validateFormEducational()" />
+            </a>
+            <span id="submit-error"></span>
+
+
+        </form>
+
+    </div>
+    <script src="prac5_script.js"></script>
+</body>
+
+</html>
